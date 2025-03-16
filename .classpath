@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" output="target/classes" path="src/main/java">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry excluding="**" kind="src" output="target/classes" path="src/main/resources">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="optional" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" output="target/test-classes" path="src/test/java">
+		<attributes>
+			<attribute name="test" value="true"/>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry excluding="**" kind="src" output="target/test-classes" path="src/test/resources">
+		<attributes>
+			<attribute name="test" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="optional" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="D:/szubair/Softwares/selenium-java-4.28.1/auto-service-annotations-1.1.1.jar"/>
+	<classpathentry kind="lib" path="D:/szubair/Softwares/selenium-java-4.28.1/auto-service-annotations-1.1.1-sources.jar"/>
+	<classpathentry kind="lib" path="D:/szubair/Softwares/selenium-java-4.28.1/byte-buddy-1.15.11.jar"/>
+	<classpathentry kind="lib" path="D:/szubair/Softwares/selenium-java-4.28.1/byte-buddy-1.15.11-sources.jar"/>
+	<classpathentry kind="lib" path="D:/szubair/Softwares/selenium-java-4.28.1/checker-qual-3.21.2.jar"/>
+	<classpathentry kind="lib" path="D:/szubair/Softwares/selenium-java-4.28.1/checker-qual-3.21.2-sources.jar"/>
+	<classpathentry kind="lib" path="D:/szubair/Softwares/selenium-java-4.28.1/commons-exec-1.4.0.jar"/>
+	<classpathentry kind="lib" path="D:/szubair/Softwares/selenium-java-4.28.1/commons-exec-1.4.0-sources.jar"/>
+	<classpathentry kind="lib" path="D:/szubair/Softwares/selenium-java-4.28.1/error_prone_annotations-2.36.0.jar"/>
+	<classpathentry kind="lib" path="D:/szubair/Softwares/selenium-java-4.28.1/error_prone_annotations-2.36.0-sources.jar"/>
+	<classpathentry kind="lib" path="D:/szubair/Softwares/selenium-java-4.28.1/failureaccess-1.0.2.jar"/>
+	<classpathentry kind="lib" path="D:/szubair/Softwares/selenium-java-4.28.1/failureaccess-1.0.2-sources.jar"/>
+	<classpathentry kind="lib" path="D:/szubair/Softwares/selenium-java-4.28.1/guava-33.4.0-jre.jar"/>
+	<classpathentry kind="lib" path="D:/szubair/Softwares/selenium-java-4.28.1/guava-33.4.0-jre-sources.jar"/>
+	<classpathentry kind="lib" path="D:/szubair/Softwares/selenium-java-4.28.1/j2objc-annotations-3.0.0.jar"/>
+	<classpathentry kind="lib" path="D:/szubair/Softwares/selenium-java-4.28.1/j2objc-annotations-3.0.0-sources.jar"/>
+	<classpathentry kind="lib" path="D:/szubair/Softwares/selenium-java-4.28.1/jspecify-1.0.0.jar"/>
+	<classpathentry kind="lib" path="D:/szubair/Softwares/selenium-java-4.28.1/jspecify-1.0.0-sources.jar"/>
+	<classpathentry kind="lib" path="D:/szubair/Softwares/selenium-java-4.28.1/jsr305-3.0.2.jar"/>
+	<classpathentry kind="lib" path="D:/szubair/Softwares/selenium-java-4.28.1/jsr305-3.0.2-sources.jar"/>
+	<classpathentry kind="lib" path="D:/szubair/Softwares/selenium-java-4.28.1/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar"/>
+	<classpathentry kind="lib" path="D:/szubair/Softwares/selenium-java-4.28.1/opentelemetry-api-1.46.0.jar"/>
+	<classpathentry kind="lib" path="D:/szubair/Softwares/selenium-java-4.28.1/opentelemetry-api-1.46.0-sources.jar"/>
+	<classpathentry kind="lib" path="D:/szubair/Softwares/selenium-java-4.28.1/opentelemetry-api-incubator-1.46.0-alpha.jar"/>
+	<classpathentry kind="lib" path="D:/szubair/Softwares/selenium-java-4.28.1/opentelemetry-api-incubator-1.46.0-alpha-sources.jar"/>
+	<classpathentry kind="lib" path="D:/szubair/Softwares/selenium-java-4.28.1/opentelemetry-context-1.46.0.jar"/>
+	<classpathentry kind="lib" path="D:/szubair/Softwares/selenium-java-4.28.1/opentelemetry-context-1.46.0-sources.jar"/>
+	<classpathentry kind="lib" path="D:/szubair/Softwares/selenium-java-4.28.1/opentelemetry-exporter-logging-1.46.0.jar"/>
+	<classpathentry kind="lib" path="D:/szubair/Softwares/selenium-java-4.28.1/opentelemetry-exporter-logging-1.46.0-sources.jar"/>
+	<classpathentry kind="lib" path="D:/szubair/Softwares/selenium-java-4.28.1/opentelemetry-sdk-1.46.0.jar"/>
+	<classpathentry kind="lib" path="D:/szubair/Softwares/selenium-java-4.28.1/opentelemetry-sdk-1.46.0-sources.jar"/>
+	<classpathentry kind="lib" path="D:/szubair/Softwares/selenium-java-4.28.1/opentelemetry-sdk-common-1.46.0.jar"/>
+	<classpathentry kind="lib" path="D:/szubair/Softwares/selenium-java-4.28.1/opentelemetry-sdk-common-1.46.0-sources.jar"/>
+	<classpathentry kind="lib" path="D:/szubair/Softwares/selenium-java-4.28.1/opentelemetry-sdk-extension-autoconfigure-1.46.0.jar"/>
+	<classpathentry kind="lib" path="D:/szubair/Softwares/selenium-java-4.28.1/opentelemetry-sdk-extension-autoconfigure-1.46.0-sources.jar"/>
+	<classpathentry kind="lib" path="D:/szubair/Softwares/selenium-java-4.28.1/opentelemetry-sdk-extension-autoconfigure-spi-1.46.0.jar"/>
+	<classpathentry kind="lib" path="D:/szubair/Softwares/selenium-java-4.28.1/opentelemetry-sdk-extension-autoconfigure-spi-1.46.0-sources.jar"/>
+	<classpathentry kind="lib" path="D:/szubair/Softwares/selenium-java-4.28.1/opentelemetry-sdk-logs-1.46.0.jar"/>
+	<classpathentry kind="lib" path="D:/szubair/Softwares/selenium-java-4.28.1/opentelemetry-sdk-logs-1.46.0-sources.jar"/>
+	<classpathentry kind="lib" path="D:/szubair/Softwares/selenium-java-4.28.1/opentelemetry-sdk-metrics-1.46.0.jar"/>
+	<classpathentry kind="lib" path="D:/szubair/Softwares/selenium-java-4.28.1/opentelemetry-sdk-metrics-1.46.0-sources.jar"/>
+	<classpathentry kind="lib" path="D:/szubair/Softwares/selenium-java-4.28.1/opentelemetry-sdk-trace-1.46.0.jar"/>
+	<classpathentry kind="lib" path="D:/szubair/Softwares/selenium-java-4.28.1/opentelemetry-sdk-trace-1.46.0-sources.jar"/>
+	<classpathentry kind="lib" path="D:/szubair/Softwares/selenium-java-4.28.1/opentelemetry-semconv-1.28.0-alpha.jar"/>
+	<classpathentry kind="lib" path="D:/szubair/Softwares/selenium-java-4.28.1/opentelemetry-semconv-1.28.0-alpha-sources.jar"/>
+	<classpathentry kind="lib" path="D:/szubair/Softwares/selenium-java-4.28.1/selenium-api-4.28.1.jar"/>
+	<classpathentry kind="lib" path="D:/szubair/Softwares/selenium-java-4.28.1/selenium-api-4.28.1-sources.jar"/>
+	<classpathentry kind="lib" path="D:/szubair/Softwares/selenium-java-4.28.1/selenium-chrome-driver-4.28.1.jar"/>
+	<classpathentry kind="lib" path="D:/szubair/Softwares/selenium-java-4.28.1/selenium-chrome-driver-4.28.1-sources.jar"/>
+	<classpathentry kind="lib" path="D:/szubair/Softwares/selenium-java-4.28.1/selenium-chromium-driver-4.28.1.jar"/>
+	<classpathentry kind="lib" path="D:/szubair/Softwares/selenium-java-4.28.1/selenium-chromium-driver-4.28.1-sources.jar"/>
+	<classpathentry kind="lib" path="D:/szubair/Softwares/selenium-java-4.28.1/selenium-devtools-v85-4.28.1.jar"/>
+	<classpathentry kind="lib" path="D:/szubair/Softwares/selenium-java-4.28.1/selenium-devtools-v85-4.28.1-sources.jar"/>
+	<classpathentry kind="lib" path="D:/szubair/Softwares/selenium-java-4.28.1/selenium-devtools-v130-4.28.1.jar"/>
+	<classpathentry kind="lib" path="D:/szubair/Softwares/selenium-java-4.28.1/selenium-devtools-v130-4.28.1-sources.jar"/>
+	<classpathentry kind="lib" path="D:/szubair/Softwares/selenium-java-4.28.1/selenium-devtools-v131-4.28.1.jar"/>
+	<classpathentry kind="lib" path="D:/szubair/Softwares/selenium-java-4.28.1/selenium-devtools-v131-4.28.1-sources.jar"/>
+	<classpathentry kind="lib" path="D:/szubair/Softwares/selenium-java-4.28.1/selenium-devtools-v132-4.28.1.jar"/>
+	<classpathentry kind="lib" path="D:/szubair/Softwares/selenium-java-4.28.1/selenium-devtools-v132-4.28.1-sources.jar"/>
+	<classpathentry kind="lib" path="D:/szubair/Softwares/selenium-java-4.28.1/selenium-edge-driver-4.28.1.jar"/>
+	<classpathentry kind="lib" path="D:/szubair/Softwares/selenium-java-4.28.1/selenium-edge-driver-4.28.1-sources.jar"/>
+	<classpathentry kind="lib" path="D:/szubair/Softwares/selenium-java-4.28.1/selenium-firefox-driver-4.28.1.jar"/>
+	<classpathentry kind="lib" path="D:/szubair/Softwares/selenium-java-4.28.1/selenium-firefox-driver-4.28.1-sources.jar"/>
+	<classpathentry kind="lib" path="D:/szubair/Softwares/selenium-java-4.28.1/selenium-http-4.28.1.jar"/>
+	<classpathentry kind="lib" path="D:/szubair/Softwares/selenium-java-4.28.1/selenium-http-4.28.1-sources.jar"/>
+	<classpathentry kind="lib" path="D:/szubair/Softwares/selenium-java-4.28.1/selenium-ie-driver-4.28.1.jar"/>
+	<classpathentry kind="lib" path="D:/szubair/Softwares/selenium-java-4.28.1/selenium-ie-driver-4.28.1-sources.jar"/>
+	<classpathentry kind="lib" path="D:/szubair/Softwares/selenium-java-4.28.1/selenium-java-4.28.1.jar"/>
+	<classpathentry kind="lib" path="D:/szubair/Softwares/selenium-java-4.28.1/selenium-java-4.28.1-sources.jar"/>
+	<classpathentry kind="lib" path="D:/szubair/Softwares/selenium-java-4.28.1/selenium-json-4.28.1.jar"/>
+	<classpathentry kind="lib" path="D:/szubair/Softwares/selenium-java-4.28.1/selenium-json-4.28.1-sources.jar"/>
+	<classpathentry kind="lib" path="D:/szubair/Softwares/selenium-java-4.28.1/selenium-manager-4.28.1.jar"/>
+	<classpathentry kind="lib" path="D:/szubair/Softwares/selenium-java-4.28.1/selenium-manager-4.28.1-sources.jar"/>
+	<classpathentry kind="lib" path="D:/szubair/Softwares/selenium-java-4.28.1/selenium-os-4.28.1.jar"/>
+	<classpathentry kind="lib" path="D:/szubair/Softwares/selenium-java-4.28.1/selenium-os-4.28.1-sources.jar"/>
+	<classpathentry kind="lib" path="D:/szubair/Softwares/selenium-java-4.28.1/selenium-remote-driver-4.28.1.jar"/>
+	<classpathentry kind="lib" path="D:/szubair/Softwares/selenium-java-4.28.1/selenium-remote-driver-4.28.1-sources.jar"/>
+	<classpathentry kind="lib" path="D:/szubair/Softwares/selenium-java-4.28.1/selenium-safari-driver-4.28.1.jar"/>
+	<classpathentry kind="lib" path="D:/szubair/Softwares/selenium-java-4.28.1/selenium-safari-driver-4.28.1-sources.jar"/>
+	<classpathentry kind="lib" path="D:/szubair/Softwares/selenium-java-4.28.1/selenium-support-4.28.1.jar"/>
+	<classpathentry kind="lib" path="D:/szubair/Softwares/selenium-java-4.28.1/selenium-support-4.28.1-sources.jar"/>
+	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
+	<classpathentry kind="output" path="target/classes"/>
+</classpath>

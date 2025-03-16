@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="1" total="4" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-03-16T09:31:37 CST" name="Suite" finished-at="2025-03-16T09:32:22 CST" duration-ms="44987">
+    <groups>
+    </groups>
+    <test started-at="2025-03-16T09:31:37 CST" name="Test" finished-at="2025-03-16T09:32:22 CST" duration-ms="44987">
+      <class name="com.tests.MyAccount_TC001">
+        <test-method is-config="true" signature="preSteps(org.testng.ITestResult)[pri:0, instance:com.tests.MyAccount_TC001@4d5d943d]" started-at="2025-03-16T09:31:37 CST" name="preSteps" finished-at="2025-03-16T09:31:49 CST" duration-ms="12462" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name={null} status=CREATED method=MyAccount_TC001.testMyAccount_TC001()[pri:0, instance:com.tests.MyAccount_TC001@4d5d943d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preSteps -->
+        <test-method signature="testMyAccount_TC001()[pri:0, instance:com.tests.MyAccount_TC001@4d5d943d]" started-at="2025-03-16T09:31:49 CST" name="testMyAccount_TC001" finished-at="2025-03-16T09:32:00 CST" duration-ms="10655" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMyAccount_TC001 -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.tests.MyAccount_TC001@4d5d943d]" started-at="2025-03-16T09:32:00 CST" name="closeBrowser" finished-at="2025-03-16T09:32:01 CST" duration-ms="573" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="postSteps()[pri:0, instance:com.tests.MyAccount_TC001@4d5d943d]" started-at="2025-03-16T09:32:22 CST" name="postSteps" finished-at="2025-03-16T09:32:22 CST" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postSteps -->
+      </class> <!-- com.tests.MyAccount_TC001 -->
+      <class name="com.tests.Login_TC001">
+        <test-method is-config="true" signature="preSteps(org.testng.ITestResult)[pri:0, instance:com.tests.Login_TC001@55141def]" started-at="2025-03-16T09:32:01 CST" name="preSteps" finished-at="2025-03-16T09:32:05 CST" duration-ms="4733" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name={null} status=CREATED method=Login_TC001.testValid_Login_TC001()[pri:1, instance:com.tests.Login_TC001@55141def] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preSteps -->
+        <test-method signature="testValid_Login_TC001()[pri:1, instance:com.tests.Login_TC001@55141def]" started-at="2025-03-16T09:32:05 CST" name="testValid_Login_TC001" finished-at="2025-03-16T09:32:12 CST" duration-ms="6210" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testValid_Login_TC001 -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.tests.Login_TC001@55141def]" started-at="2025-03-16T09:32:12 CST" name="closeBrowser" finished-at="2025-03-16T09:32:12 CST" duration-ms="512" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="preSteps(org.testng.ITestResult)[pri:0, instance:com.tests.Login_TC001@55141def]" started-at="2025-03-16T09:32:12 CST" name="preSteps" finished-at="2025-03-16T09:32:17 CST" duration-ms="5016" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name={null} status=CREATED method=Login_TC001.testInValid_Login_TC002()[pri:2, instance:com.tests.Login_TC001@55141def] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preSteps -->
+        <test-method signature="testInValid_Login_TC002()[pri:2, instance:com.tests.Login_TC001@55141def]" started-at="2025-03-16T09:32:17 CST" name="testInValid_Login_TC002" finished-at="2025-03-16T09:32:21 CST" duration-ms="4295" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInValid_Login_TC002 -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.tests.Login_TC001@55141def]" started-at="2025-03-16T09:32:21 CST" name="closeBrowser" finished-at="2025-03-16T09:32:22 CST" duration-ms="451" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- com.tests.Login_TC001 -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
