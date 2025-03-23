@@ -50,7 +50,13 @@
 	    <artifactId>ashot</artifactId>
 	    <version>1.5.4</version>
 	</dependency>
-
+	
+	<!-- ExtentReports (for HTML reporting) -->
+    <dependency>
+        <groupId>com.aventstack</groupId>
+        <artifactId>extentreports</artifactId>
+        <version>5.1.0</version>
+    </dependency>
 
 
 

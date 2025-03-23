@@ -90,7 +90,7 @@ public class products extends BasePage {
 		try {
 			productsAddToCart.click();
 			PageActions.waitForPageLoad();
-			PageActions.captureScreenshot();
+			BasePage.captureScreenshot("");
 			
 			// this is to get the current POM method in execution to show in the report
 			AppGlobalVariable.currentMethodName = StackWalker.getInstance()
@@ -107,7 +107,7 @@ public class products extends BasePage {
 		try {
 			quantity.sendKeys(quantities);
 			PageActions.waitForPageLoad();
-			PageActions.captureScreenshot();
+			BasePage.captureScreenshot("");
 			
 			// this is to get the current POM method in execution to show in the report
 			AppGlobalVariable.currentMethodName = StackWalker.getInstance()
@@ -124,7 +124,7 @@ public class products extends BasePage {
 		try {
 			checkoutButton.click();;
 			PageActions.waitForPageLoad();
-			PageActions.captureScreenshot();
+			BasePage.captureScreenshot("");
 			
 			// this is to get the current POM method in execution to show in the report
 			AppGlobalVariable.currentMethodName = StackWalker.getInstance()
@@ -141,7 +141,7 @@ public class products extends BasePage {
 		try {
 			checkoutButton.click();;
 			PageActions.waitForPageLoad();
-			PageActions.captureScreenshot();
+			BasePage.captureScreenshot("");
 			
 			// this is to get the current POM method in execution to show in the report
 			AppGlobalVariable.currentMethodName = StackWalker.getInstance()
@@ -158,7 +158,7 @@ public class products extends BasePage {
 		try {
 			firstName.sendKeys(firstName1);
 			PageActions.waitForPageLoad();
-			PageActions.captureScreenshot();
+			BasePage.captureScreenshot("");
 			
 			// this is to get the current POM method in execution to show in the report
 			AppGlobalVariable.currentMethodName = StackWalker.getInstance()
@@ -175,7 +175,7 @@ public class products extends BasePage {
 		try {
 			lastName.sendKeys(lastName1);
 			PageActions.waitForPageLoad();
-			PageActions.captureScreenshot();
+			BasePage.captureScreenshot("");
 			
 			// this is to get the current POM method in execution to show in the report
 			AppGlobalVariable.currentMethodName = StackWalker.getInstance()
@@ -192,7 +192,7 @@ public class products extends BasePage {
 		try {
 			address1.sendKeys(address);
 			PageActions.waitForPageLoad();
-			PageActions.captureScreenshot();
+			BasePage.captureScreenshot("");
 			
 			// this is to get the current POM method in execution to show in the report
 			AppGlobalVariable.currentMethodName = StackWalker.getInstance()
@@ -209,7 +209,7 @@ public class products extends BasePage {
 		try {
 			city.sendKeys(cityName);
 			PageActions.waitForPageLoad();
-			PageActions.captureScreenshot();
+			BasePage.captureScreenshot("");
 			
 			// this is to get the current POM method in execution to show in the report
 			AppGlobalVariable.currentMethodName = StackWalker.getInstance()
@@ -226,7 +226,7 @@ public class products extends BasePage {
 		try {
 			postalCode.sendKeys(postal);
 			PageActions.waitForPageLoad();
-			PageActions.captureScreenshot();
+			BasePage.captureScreenshot("");
 			
 			// this is to get the current POM method in execution to show in the report
 			AppGlobalVariable.currentMethodName = StackWalker.getInstance()
@@ -245,7 +245,7 @@ public class products extends BasePage {
 			Select country = new Select(countryDropdown);
 			country.selectByVisibleText(countryName);
 			PageActions.waitForPageLoad();
-			PageActions.captureScreenshot();
+			BasePage.captureScreenshot("");
 			
 			// this is to get the current POM method in execution to show in the report
 			AppGlobalVariable.currentMethodName = StackWalker.getInstance()
@@ -264,7 +264,7 @@ public class products extends BasePage {
 			Select country = new Select(region);
 			country.selectByVisibleText(regionName);
 			PageActions.waitForPageLoad();
-			PageActions.captureScreenshot();
+			BasePage.captureScreenshot("");
 			
 			// this is to get the current POM method in execution to show in the report
 			AppGlobalVariable.currentMethodName = StackWalker.getInstance()
@@ -281,7 +281,7 @@ public class products extends BasePage {
 		try {
 			continueButton.click();
 			PageActions.waitForPageLoad();
-			PageActions.captureScreenshot();
+			BasePage.captureScreenshot("");
 			
 			// this is to get the current POM method in execution to show in the report
 			AppGlobalVariable.currentMethodName = StackWalker.getInstance()
@@ -298,7 +298,7 @@ public class products extends BasePage {
 		try {
 			continueButton1.click();
 			PageActions.waitForPageLoad();
-			PageActions.captureScreenshot();
+			BasePage.captureScreenshot("");
 			
 			// this is to get the current POM method in execution to show in the report
 			AppGlobalVariable.currentMethodName = StackWalker.getInstance()
@@ -315,7 +315,7 @@ public class products extends BasePage {
 		try {
 			comments.sendKeys(comment);
 			PageActions.waitForPageLoad();
-			PageActions.captureScreenshot();
+			BasePage.captureScreenshot("");
 			
 			// this is to get the current POM method in execution to show in the report
 			AppGlobalVariable.currentMethodName = StackWalker.getInstance()
@@ -332,7 +332,7 @@ public class products extends BasePage {
 		try {
 			continueButtonShipping.click();
 			PageActions.waitForPageLoad();
-			PageActions.captureScreenshot();
+			BasePage.captureScreenshot("");
 			
 			// this is to get the current POM method in execution to show in the report
 			AppGlobalVariable.currentMethodName = StackWalker.getInstance()
@@ -349,7 +349,7 @@ public class products extends BasePage {
 		try {
 			termsAndConditions.click();
 			PageActions.waitForPageLoad();
-			PageActions.captureScreenshot();
+			BasePage.captureScreenshot("");
 			
 			// this is to get the current POM method in execution to show in the report
 			AppGlobalVariable.currentMethodName = StackWalker.getInstance()
@@ -366,7 +366,7 @@ public class products extends BasePage {
 		try {
 			continueButtonPayment.click();
 			PageActions.waitForPageLoad();
-			PageActions.captureScreenshot();
+			BasePage.captureScreenshot("");
 			
 			// this is to get the current POM method in execution to show in the report
 			AppGlobalVariable.currentMethodName = StackWalker.getInstance()
@@ -383,7 +383,7 @@ public class products extends BasePage {
 		try {
 			confirmOrder.click();
 			PageActions.waitForPageLoad();
-			PageActions.captureScreenshot();
+			BasePage.captureScreenshot("");
 			
 			// this is to get the current POM method in execution to show in the report
 			AppGlobalVariable.currentMethodName = StackWalker.getInstance()

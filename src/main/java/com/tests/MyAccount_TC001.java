@@ -24,8 +24,11 @@ public class MyAccount_TC001 extends BasePage {
 		Account acc = new Account();
 
 		// get the user name and password from GlobalConfig
+		String testName = "MyAccount_TC001";
+		String testDescription = "Verify user ia able to edit the information";
 		String userName = AppGlobalVariable.getExcelData("UserName");
 		String password = AppGlobalVariable.getExcelData("Password");
+		test = extent.createTest(testName, testDescription);
 		
 		// Test starts here
 		

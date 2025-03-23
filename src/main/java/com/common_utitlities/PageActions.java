@@ -61,27 +61,6 @@ public class PageActions extends BasePage {
 		AppGlobalVariable.currentScreenshotPath = "screenshots/" + randomStr + ".png";
 	}
 	
-	public static void captureScreenshot() throws IOException {
-		File directory = new File(Constants.SCREENSHOTS_PATH);
-		
-		if (!directory.exists()) { 
-			directory.mkdir();   
-			
-			
-		}
-		
-        String randomStr = UUID.randomUUID().toString().replace("-", "").substring(0, 10);
-        
-        File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-        
-        // Save the Screenshot
-        File destinationFile = new File(Constants.SCREENSHOTS_PATH + "/" + randomStr +".png");
-        Files.copy(screenshot.toPath(), destinationFile.toPath());
-
-        System.out.println("Screenshot saved successfully!");
-
-		AppGlobalVariable.currentScreenshotPath = "screenshots/" + randomStr + ".png";
-	}
 
 	public static String decryptPassword (String encodedPpassword) {
 		

@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import com.aventstack.extentreports.Status;
 import com.common_utitlities.AppGlobalVariable;
 import com.common_utitlities.BasePage;
 import com.common_utitlities.ExcelLibrary;
@@ -34,16 +35,19 @@ public class HomePage extends BasePage {
 		try {
 			userDropDown.click();
 			PageActions.waitForPageLoad();
-			PageActions.captureScreenshot();
+			BasePage.captureScreenshot("");
 			
 			// this is to get the current POM method in execution to show in the report
 			AppGlobalVariable.currentMethodName = StackWalker.getInstance()
 	                .walk(frames -> frames.findFirst().map(StackWalker.StackFrame::getMethodName).orElse("Unknown"));
 			
 			ExcelLibrary.writeData(AppGlobalVariable.currentTest, AppGlobalVariable.getCurrentStep(), "Status", "Pass");
+			test.log(Status.PASS, "clicked successfully on user dropdown: " + test.addScreenCaptureFromPath(captureScreenshot("clickUserDropDown")));
+			
 		} catch (Throwable e) {
 			ExcelLibrary.writeData(AppGlobalVariable.currentTest, AppGlobalVariable.getCurrentStep(), "Status", "Fail");
 			ExcelLibrary.writeData(AppGlobalVariable.currentTest, AppGlobalVariable.getCurrentStep(), "Failure Reason", e.getMessage());
+			test.log(Status.FAIL, "unable to click on user dropdown: " + test.addScreenCaptureFromPath(captureScreenshot("clickUserDropDown")));
 		}
 	}
 	
@@ -51,7 +55,7 @@ public class HomePage extends BasePage {
 		try {
 			loginButton.click();
 			PageActions.waitForPageLoad();
-			PageActions.captureScreenshot();
+			BasePage.captureScreenshot("");
 
 			// this is to get the current POM method in execution to show in the report
 			AppGlobalVariable.currentMethodName = StackWalker.getInstance()
@@ -59,9 +63,12 @@ public class HomePage extends BasePage {
 				
 			
 			ExcelLibrary.writeData(AppGlobalVariable.currentTest, AppGlobalVariable.getCurrentStep(), "Status", "Pass");
+			test.log(Status.PASS, "clicked successfully on login button: " + test.addScreenCaptureFromPath(captureScreenshot("clickLoginButton")));
+		
 		} catch (Throwable e) {
 			ExcelLibrary.writeData(AppGlobalVariable.currentTest, AppGlobalVariable.getCurrentStep(), "Status", "Fail");
 			ExcelLibrary.writeData(AppGlobalVariable.currentTest, AppGlobalVariable.getCurrentStep(), "Failure Reason", e.getMessage());
+			test.log(Status.FAIL, "unable to click login button: " + test.addScreenCaptureFromPath(captureScreenshot("clickLoginButton")));
 		}
 	}
 	
@@ -69,16 +76,20 @@ public class HomePage extends BasePage {
 		try {
 			logoutButton.click();
 			PageActions.waitForPageLoad();
-			PageActions.captureScreenshot();
+			BasePage.captureScreenshot("");
 			
 			// this is to get the current POM method in execution to show in the report
 			AppGlobalVariable.currentMethodName = StackWalker.getInstance()
 	                .walk(frames -> frames.findFirst().map(StackWalker.StackFrame::getMethodName).orElse("Unknown"));
 			
 			ExcelLibrary.writeData(AppGlobalVariable.currentTest, AppGlobalVariable.getCurrentStep(), "Status", "Pass");
+			test.log(Status.PASS, "clicked successfully on logout button: " + test.addScreenCaptureFromPath(captureScreenshot("clickLogoutButton")));
+		
 		} catch (Throwable e) {
 			ExcelLibrary.writeData(AppGlobalVariable.currentTest, AppGlobalVariable.getCurrentStep(), "Status", "Fail");
 			ExcelLibrary.writeData(AppGlobalVariable.currentTest, AppGlobalVariable.getCurrentStep(), "Failure Reason", e.getMessage());
+			test.log(Status.FAIL, "unable to click logout button: " + test.addScreenCaptureFromPath(captureScreenshot("clickLogoutButton")));
+
 		}
 	}
 }

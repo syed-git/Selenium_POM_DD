@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import org.testng.annotations.Test;
 
+import com.aventstack.extentreports.Status;
 import com.common_utitlities.AppGlobalVariable;
 import com.common_utitlities.BasePage;
 import com.common_utitlities.ExcelLibrary;
@@ -15,20 +16,24 @@ import com.web.pages.LoginPage;
 public class Login_TC001 extends BasePage {
 	
 	@Test (priority = 1)
+	
 	public void testValid_Login_TC001 () throws InterruptedException, IOException {
 		
 		// create necessary objects required
 		HomePage hp = new HomePage();
 		LoginPage lp = new LoginPage();
 
-		// get the user name and password from GlobalConfig
-		// ExcelLibrary.readData("GlobalConfig", "Values");
+		String testName = "Valid_Login_TC001";
+		String testDescription = "Verify user ia able to login successfully";
 		String userName = AppGlobalVariable.getExcelData("UserName");
 		String password = AppGlobalVariable.getExcelData("Password");
+		
+		test = extent.createTest(testName, testDescription);
 		
 		// Test starts here
 		
 		PageValidations.seeTitleContains("Your Store", true);
+		
 		hp.clickOnUserDropDown();
 		hp.clickonLoginButton();
 		PageValidations.seeElementContains(lp.retruningCustomer, "Returning Customer", true);
@@ -51,9 +56,11 @@ public class Login_TC001 extends BasePage {
 		LoginPage lp = new LoginPage();
 
 		// user name and passwords are hard coded as it's an invalid login test
+		String testName = "InValid_Login_TC002";
+		String testDescription = "Verify user i unable to login with invalid credentials";
 		String userName = "abz";
 		String password = "avzggz";
-		
+		test = extent.createTest(testName, testDescription);
 		// Test starts here
 		
 		PageValidations.seeTitleContains("Your Store", true);
