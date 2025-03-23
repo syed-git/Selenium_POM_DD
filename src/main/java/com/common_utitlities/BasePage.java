@@ -116,7 +116,7 @@ public class BasePage {
 		String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime());
 
 		//copy the original testData sheet to temp folder to make sure original file is not getting corrupted
-		File tempFile = new File(optFilePath, originalFile.getName() + timeStamp + ".xlsx");
+		File tempFile = new File(optFilePath, "test-report_" + timeStamp + ".xlsx");
 		FileUtils.copyFile(originalFile, tempFile);
 		
 		if (directory.exists()) {
