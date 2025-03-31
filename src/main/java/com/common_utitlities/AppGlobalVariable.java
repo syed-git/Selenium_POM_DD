@@ -13,6 +13,7 @@ public class AppGlobalVariable {
 	public static String currentScreenshotPath;
 	
 	public static String currentMethodName;
+	public static String currentScreenshot;
 	
 	
 	public static String getExcelData (String keyName) {

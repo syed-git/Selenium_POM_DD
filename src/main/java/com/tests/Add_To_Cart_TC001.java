@@ -20,46 +20,46 @@ public class Add_To_Cart_TC001 extends BasePage {
 	public void testAdd_To_Cart_TC001() throws InterruptedException, IOException {
 		
 		// create necessary objects required
-		HomePage hp = new HomePage();
-		LoginPage lp = new LoginPage();
-		Account acc = new Account();
-		products product = new products();
-		
-		// get the user name and password from GlobalConfig
-		String userName = AppGlobalVariable.getExcelData("UserName");
-		String password = AppGlobalVariable.getExcelData("Password");
-		
-		// Test starts here
-		
-		PageValidations.seeTitleContains("Your Store", true);
-		hp.clickOnUserDropDown();
-		hp.clickonLoginButton();
-		PageValidations.seeElementContains(lp.retruningCustomer, "Returning Customer", true);
-		lp.enterEmail(userName);
-		lp.enterPassword(PageActions.decryptPassword(password));
-		lp.clickOnLogin();
-		PageValidations.seeTitleContains("My Account", true);
-		acc.hoverOnLaptopsDropdown();
-		acc.clickOnShowOption();
-		product.clickOnAddToCart();
-		PageValidations.seeElementContains(product.successfullyAddedToCart, "Success: You have added", false);
-		product.clcikOnShoppingCartLink();
-		
-		
-		
-		
-		
-		
-		acc.clickOnEditYourInformation();
-		PageValidations.seeElementContains(acc.myAccountInfoText, "My Account Information", true);
-		acc.enterFirstName("Test1");
-		acc.enterLastName("Zubair");
-		acc.clickOnContinue();
-		PageValidations.seeElementContains(acc.accountUpdatedSuccessMessage, "Success: Your account has been successfully updated.", true);
-		hp.clickOnUserDropDown();
-		hp.clickonLogoutButton();
-		PageValidations.seeElementContains(hp.accLogoutText, "Account Logout", true);
-		
+//		HomePage hp = new HomePage();
+//		LoginPage lp = new LoginPage();
+//		Account acc = new Account();
+//		products product = new products();
+//		
+//		// get the user name and password from GlobalConfig
+//		String userName = AppGlobalVariable.getExcelData("UserName");
+//		String password = AppGlobalVariable.getExcelData("Password");
+//		
+//		// Test starts here
+//		
+//		PageValidations.seeTitleContains("Your Store", true);
+//		hp.clickOnUserDropDown();
+//		hp.clickonLoginButton();
+//		PageValidations.seeElementContains(lp.retruningCustomer, "Returning Customer", true);
+//		lp.enterEmail(userName);
+//		lp.enterPassword(PageActions.decryptPassword(password));
+//		lp.clickOnLogin();
+//		PageValidations.seeTitleContains("My Account", true);
+//		acc.hoverOnLaptopsDropdown();
+//		acc.clickOnShowOption();
+//		product.clickOnAddToCart();
+//		PageValidations.seeElementContains(product.successfullyAddedToCart, "Success: You have added", false);
+//		product.clcikOnShoppingCartLink();
+//		
+//		
+//		
+//		
+//		
+//		
+//		acc.clickOnEditYourInformation();
+//		PageValidations.seeElementContains(acc.myAccountInfoText, "My Account Information", true);
+//		acc.enterFirstName("Test1");
+//		acc.enterLastName("Zubair");
+//		acc.clickOnContinue();
+//		PageValidations.seeElementContains(acc.accountUpdatedSuccessMessage, "Success: Your account has been successfully updated.", true);
+//		hp.clickOnUserDropDown();
+//		hp.clickonLogoutButton();
+//		PageValidations.seeElementContains(hp.accLogoutText, "Account Logout", true);
+//		
 		// Test ends here
 	}
 

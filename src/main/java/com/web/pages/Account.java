@@ -7,6 +7,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 import com.common_utitlities.AppGlobalVariable;
 import com.common_utitlities.BasePage;
@@ -55,13 +56,15 @@ public class Account extends BasePage {
 	                .walk(frames -> frames.findFirst().map(StackWalker.StackFrame::getMethodName).orElse("Unknown"));
 			
 			ExcelLibrary.writeData(AppGlobalVariable.currentTest, AppGlobalVariable.getCurrentStep(), "Status", "Pass");
-			test.log(Status.PASS, "Clicked successfully on edit your information: " + test.addScreenCaptureFromPath(captureScreenshot("clickEditInfo")));
-
+			
+			test.log(Status.PASS, "Clicked successfully on edit your information", MediaEntityBuilder.createScreenCaptureFromBase64String(AppGlobalVariable.currentScreenshot, "Screenshot").build());
+			
 		} catch (Throwable e) {
 			ExcelLibrary.writeData(AppGlobalVariable.currentTest, AppGlobalVariable.getCurrentStep(), "Status", "Fail");
 			ExcelLibrary.writeData(AppGlobalVariable.currentTest, AppGlobalVariable.getCurrentStep(), "Failure Reason", e.getMessage());
-			test.log(Status.FAIL, "unable to click on edit your information: " + test.addScreenCaptureFromPath(captureScreenshot("clickEditInfo")));
-
+			
+			test.log(Status.FAIL, "unable to click on edit your information", MediaEntityBuilder.createScreenCaptureFromBase64String(AppGlobalVariable.currentScreenshot, "Screenshot").build());
+			
 		}
 	}
 	
@@ -77,13 +80,16 @@ public class Account extends BasePage {
 	                .walk(frames -> frames.findFirst().map(StackWalker.StackFrame::getMethodName).orElse("Unknown"));
 			
 			ExcelLibrary.writeData(AppGlobalVariable.currentTest, AppGlobalVariable.getCurrentStep(), "Status", "Pass");
-			test.log(Status.PASS, "entered first name successfully: " + test.addScreenCaptureFromPath(captureScreenshot("enterFirstName")));
 
+			test.log(Status.PASS, "entered first name successfully", MediaEntityBuilder.createScreenCaptureFromBase64String(AppGlobalVariable.currentScreenshot, "").build());
+			
+			
 		} catch (Throwable e) {
 			ExcelLibrary.writeData(AppGlobalVariable.currentTest, AppGlobalVariable.getCurrentStep(), "Status", "Fail");
 			ExcelLibrary.writeData(AppGlobalVariable.currentTest, AppGlobalVariable.getCurrentStep(), "Failure Reason", e.getMessage());
-			test.log(Status.FAIL, "unable to enter first name: " + test.addScreenCaptureFromPath(captureScreenshot("enterFirstName")));
-
+			
+			test.log(Status.FAIL, "unable to enter first name", MediaEntityBuilder.createScreenCaptureFromBase64String(AppGlobalVariable.currentScreenshot, "").build());
+			
 		}
 	}
 	
@@ -99,13 +105,15 @@ public class Account extends BasePage {
 	                .walk(frames -> frames.findFirst().map(StackWalker.StackFrame::getMethodName).orElse("Unknown"));
 			
 			ExcelLibrary.writeData(AppGlobalVariable.currentTest, AppGlobalVariable.getCurrentStep(), "Status", "Pass");
-			test.log(Status.PASS, "entered last name successfully: " + test.addScreenCaptureFromPath(captureScreenshot("enterLastName")));
-
+			
+			test.log(Status.PASS, "entered last name successfull", MediaEntityBuilder.createScreenCaptureFromBase64String(AppGlobalVariable.currentScreenshot, "").build());
+			
 		} catch (Throwable e) {
 			ExcelLibrary.writeData(AppGlobalVariable.currentTest, AppGlobalVariable.getCurrentStep(), "Status", "Fail");
 			ExcelLibrary.writeData(AppGlobalVariable.currentTest, AppGlobalVariable.getCurrentStep(), "Failure Reason", e.getMessage());
-			test.log(Status.FAIL, "unable to enter last namen: " + test.addScreenCaptureFromPath(captureScreenshot("enterLastNam")));
-
+			
+			test.log(Status.FAIL, "unable to enter last name", MediaEntityBuilder.createScreenCaptureFromBase64String(AppGlobalVariable.currentScreenshot, "").build());
+			
 		}
 	}
 	
@@ -120,13 +128,15 @@ public class Account extends BasePage {
 	                .walk(frames -> frames.findFirst().map(StackWalker.StackFrame::getMethodName).orElse("Unknown"));
 			
 			ExcelLibrary.writeData(AppGlobalVariable.currentTest, AppGlobalVariable.getCurrentStep(), "Status", "Pass");
-			test.log(Status.PASS, "clicked successfully on continue button: " + test.addScreenCaptureFromPath(captureScreenshot("clickContinue")));
-
+			
+			test.log(Status.PASS, "clicked successfully on continue butto", MediaEntityBuilder.createScreenCaptureFromBase64String(AppGlobalVariable.currentScreenshot, "").build());
+			
 		} catch (Throwable e) {
 			ExcelLibrary.writeData(AppGlobalVariable.currentTest, AppGlobalVariable.getCurrentStep(), "Status", "Fail");
 			ExcelLibrary.writeData(AppGlobalVariable.currentTest, AppGlobalVariable.getCurrentStep(), "Failure Reason", e.getMessage());
-			test.log(Status.FAIL, "unable to click on continue button: " + test.addScreenCaptureFromPath(captureScreenshot("clickContinue")));
-
+			
+			test.log(Status.FAIL, "unable to click on continue button", MediaEntityBuilder.createScreenCaptureFromBase64String(AppGlobalVariable.currentScreenshot, "").build());
+			
 		}
 	}
 	
@@ -142,13 +152,15 @@ public class Account extends BasePage {
 	                .walk(frames -> frames.findFirst().map(StackWalker.StackFrame::getMethodName).orElse("Unknown"));
 			
 			ExcelLibrary.writeData(AppGlobalVariable.currentTest, AppGlobalVariable.getCurrentStep(), "Status", "Pass");
-			test.log(Status.PASS, "hovered successfully on Laptops dropdown: " + test.addScreenCaptureFromPath(captureScreenshot("hoverLaptop")));
-
+			
+			test.log(Status.PASS, "hovered successfully on Laptops dropdown", MediaEntityBuilder.createScreenCaptureFromBase64String(AppGlobalVariable.currentScreenshot, "").build());
+			
 		} catch (Throwable e) {
 			ExcelLibrary.writeData(AppGlobalVariable.currentTest, AppGlobalVariable.getCurrentStep(), "Status", "Fail");
 			ExcelLibrary.writeData(AppGlobalVariable.currentTest, AppGlobalVariable.getCurrentStep(), "Failure Reason", e.getMessage());
-			test.log(Status.FAIL, "unable to hover on laptop dropdown: " + test.addScreenCaptureFromPath(captureScreenshot("hoverLaptop")));
-
+			
+			test.log(Status.FAIL, "unable to hover on laptop dropdown", MediaEntityBuilder.createScreenCaptureFromBase64String(AppGlobalVariable.currentScreenshot, "").build());
+			
 		}
 	}
 	
@@ -163,12 +175,14 @@ public class Account extends BasePage {
 	                .walk(frames -> frames.findFirst().map(StackWalker.StackFrame::getMethodName).orElse("Unknown"));
 			
 			ExcelLibrary.writeData(AppGlobalVariable.currentTest, AppGlobalVariable.getCurrentStep(), "Status", "Pass");
-			test.log(Status.PASS, "clicked successfully on show options: " + test.addScreenCaptureFromPath(captureScreenshot("clickShowOptions")));
-
+			
+			test.log(Status.PASS, "clicked successfully on show options", MediaEntityBuilder.createScreenCaptureFromBase64String(AppGlobalVariable.currentScreenshot, "").build());
+			
 		} catch (Throwable e) {
 			ExcelLibrary.writeData(AppGlobalVariable.currentTest, AppGlobalVariable.getCurrentStep(), "Status", "Fail");
 			ExcelLibrary.writeData(AppGlobalVariable.currentTest, AppGlobalVariable.getCurrentStep(), "Failure Reason", e.getMessage());
-			test.log(Status.FAIL, "unable to click on Show options: " + test.addScreenCaptureFromPath(captureScreenshot("clickShoeOptions")));
+			
+			test.log(Status.FAIL, "unable to click on Show options", MediaEntityBuilder.createScreenCaptureFromBase64String(AppGlobalVariable.currentScreenshot, "").build());
 
 		}
 	}

@@ -11,6 +11,7 @@ import javax.imageio.ImageIO;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebElement;
 
 import ru.yandex.qatools.ashot.AShot;
 import ru.yandex.qatools.ashot.Screenshot;
@@ -67,9 +68,15 @@ public class PageActions extends BasePage {
         // Decode Base64
         byte[] decodedBytes = Base64.getDecoder().decode(encodedPpassword);
         String decryptPassword = new String(decodedBytes);
-
-        System.out.println(decryptPassword);
+        
 		return decryptPassword;
 		
 	}
+	
+	public static void switchToWindow(WebElement element) {
+	
+		Set <String> allWindows = BasePage.driver.getWindowHandles();
+	}
+	
+	
 }
