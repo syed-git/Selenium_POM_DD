@@ -1,4 +1,4 @@
-package com.tests;
+package com.tests.smoke;
 
 import java.io.IOException;
 

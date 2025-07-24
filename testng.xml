@@ -3,11 +3,10 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="com.tests.Add_To_Cart_TC001"/>
-      <class name="com.tests.MyAccount_TC001"/>
-      <class name="com.tests.Modify_Address_TC001"/>
-      <class name="com.common_utitlities.BasePage"/>
-      <class name="com.tests.Login_TC001"/>
+      <class name="com.tests.regression.Add_To_Cart_TC001"/>
+      <class name="com.tests.regression.MyAccount_TC001"/>
+      <class name="com.tests.regression.Modify_Address_TC001"/>
+      <class name="com.tests.smoke.Login_TC001"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

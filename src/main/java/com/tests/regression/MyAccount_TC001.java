@@ -1,4 +1,4 @@
-package com.tests;
+package com.tests.regression;
 
 import java.io.IOException;
 
