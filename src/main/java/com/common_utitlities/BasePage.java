@@ -85,10 +85,10 @@ public class BasePage {
 	                .walk(frames -> frames.findFirst().map(StackWalker.StackFrame::getMethodName).orElse("Unknown"));
 			
 			// Update the step status
-			ExcelLibrary.writeData(AppGlobalVariable.currentTest, AppGlobalVariable.getCurrentStep(), "Status", "Pass");
+			ExcelLibrary.writeData(AppGlobalVariable.currentTest, AppGlobalVariable.currentStep, "Status", "Pass");
 			
 		} catch (Throwable e) {
-			ExcelLibrary.writeData(AppGlobalVariable.currentTest, AppGlobalVariable.getCurrentStep(), "Status", "Fail");
+			ExcelLibrary.writeData(AppGlobalVariable.currentTest, AppGlobalVariable.currentStep, "Status", "Fail");
 		}
 				
 		return driver;

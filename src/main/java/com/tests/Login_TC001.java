@@ -24,7 +24,7 @@ public class Login_TC001 extends BasePage {
 		LoginPage lp = new LoginPage();
 
 		String testName = "Valid_Login_TC001";
-		String testDescription = "Verify user ia able to login successfully";
+		String testDescription = "Verify user is able to login successfully";
 		String userName = AppGlobalVariable.getExcelData("UserName");
 		String password = AppGlobalVariable.getExcelData("Password");
 		

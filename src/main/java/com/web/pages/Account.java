@@ -40,6 +40,10 @@ public class Account extends BasePage {
 	@FindBy(linkText = "Show All Laptops & Notebooks")
 	private WebElement showAllLaptops;
 	
+	@FindBy(linkText = "Modify your address book entries")
+	private WebElement modifyAddressBookEntries;
+	
+	
 	public Account() {
 		PageFactory.initElements(BasePage.driver, this);
 	}
@@ -183,6 +187,29 @@ public class Account extends BasePage {
 			ExcelLibrary.writeData(AppGlobalVariable.currentTest, AppGlobalVariable.getCurrentStep(), "Failure Reason", e.getMessage());
 			
 			test.log(Status.FAIL, "unable to click on Show options", MediaEntityBuilder.createScreenCaptureFromBase64String(AppGlobalVariable.currentScreenshot, "").build());
+
+		}
+	}
+	
+	public void clickOnModifyAddressBookEntries() throws InterruptedException, IOException {
+		try {
+			modifyAddressBookEntries.click();
+			PageActions.waitForPageLoad();
+			BasePage.captureScreenshot("");
+			
+			// this is to get the current POM method in execution to show in the report
+			AppGlobalVariable.currentMethodName = StackWalker.getInstance()
+	                .walk(frames -> frames.findFirst().map(StackWalker.StackFrame::getMethodName).orElse("Unknown"));
+			
+			ExcelLibrary.writeData(AppGlobalVariable.currentTest, AppGlobalVariable.getCurrentStep(), "Status", "Pass");
+			
+			test.log(Status.PASS, "clicked successfully on Modify Address Book Entries", MediaEntityBuilder.createScreenCaptureFromBase64String(AppGlobalVariable.currentScreenshot, "").build());
+			
+		} catch (Throwable e) {
+			ExcelLibrary.writeData(AppGlobalVariable.currentTest, AppGlobalVariable.getCurrentStep(), "Status", "Fail");
+			ExcelLibrary.writeData(AppGlobalVariable.currentTest, AppGlobalVariable.getCurrentStep(), "Failure Reason", e.getMessage());
+			
+			test.log(Status.FAIL, "unable to click on Modify Address Book Entries", MediaEntityBuilder.createScreenCaptureFromBase64String(AppGlobalVariable.currentScreenshot, "").build());
 
 		}
 	}

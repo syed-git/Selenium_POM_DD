@@ -15,7 +15,7 @@ import com.web.pages.LoginPage;
 
 public class MyAccount_TC001 extends BasePage {
 	
-	@Test
+	@Test (priority = 3)
 	public void testMyAccount_TC001() throws InterruptedException, IOException {
 		
 		// create necessary objects required
