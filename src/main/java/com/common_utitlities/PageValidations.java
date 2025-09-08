@@ -6,6 +6,7 @@ import java.time.Duration;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
+import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 
 public class PageValidations extends BasePage {
@@ -28,13 +29,15 @@ public class PageValidations extends BasePage {
 			}
 			
 			ExcelLibrary.writeData(AppGlobalVariable.currentTest, AppGlobalVariable.currentStep, "Status", "Pass");
-	        test.log(Status.PASS, "Web Page title is as expected: " + test.addScreenCaptureFromPath(captureScreenshot("titleMatch")));
-	        
+			test.log(Status.PASS, "Web Page title is as expected",
+	        		  MediaEntityBuilder.createScreenCaptureFromBase64String(AppGlobalVariable.currentScreenshot, "").build());
+			   
 		} catch (Throwable e) {
 			ExcelLibrary.writeData(AppGlobalVariable.currentTest, AppGlobalVariable.getCurrentStep(), "Status", "Fail");
 			ExcelLibrary.writeData(AppGlobalVariable.currentTest, AppGlobalVariable.getCurrentStep(), "Failure Reason", e.getMessage());
-			test.log(Status.FAIL, "Web Page title is not as expected: " + test.addScreenCaptureFromPath(captureScreenshot("titleMatch")));
-	        
+			
+			test.log(Status.FAIL, "Web Page title is not as expected",
+	        		  MediaEntityBuilder.createScreenCaptureFromBase64String(AppGlobalVariable.currentScreenshot, "").build());
 		}
 	}
 	
@@ -66,13 +69,49 @@ public class PageValidations extends BasePage {
 			}
 			
 			ExcelLibrary.writeData(AppGlobalVariable.currentTest, AppGlobalVariable.getCurrentStep(), "Status", "Pass");
-			test.log(Status.PASS, "Element contains the expected condition " + test.addScreenCaptureFromPath(captureScreenshot("elementContains")));
-	        
+			
+			test.log(Status.PASS, "Element contains the expected condition",
+	        		  MediaEntityBuilder.createScreenCaptureFromBase64String(AppGlobalVariable.currentScreenshot, "").build());
+			
 		} catch (Throwable e) {
 			ExcelLibrary.writeData(AppGlobalVariable.currentTest, AppGlobalVariable.getCurrentStep(), "Status", "Fail");
 			ExcelLibrary.writeData(AppGlobalVariable.currentTest, AppGlobalVariable.getCurrentStep(), "Failure Reason", e.getMessage());
-			test.log(Status.FAIL, "Element does not contains expected consition: " + test.addScreenCaptureFromPath(captureScreenshot("elementContains")));
-	        
+			
+			test.log(Status.FAIL, "Element does not contains expected condition",
+	        		  MediaEntityBuilder.createScreenCaptureFromBase64String(AppGlobalVariable.currentScreenshot, "").build());
+			
+		}
+	}
+	
+	public static void seeElementEnabled(WebElement element, boolean condition) throws IOException {
+		
+		try {
+			boolean state = element.isEnabled();
+			
+			BasePage.captureScreenshot("");
+			
+			if (condition) {
+				Assert.assertTrue(state);
+			} else {
+				Assert.assertFalse(state);
+			}
+			
+			// this is to get the current POM method in execution to show in the report
+			AppGlobalVariable.currentMethodName = StackWalker.getInstance()
+	                .walk(frames -> frames.findFirst().map(StackWalker.StackFrame::getMethodName).orElse("Unknown"));
+			
+			ExcelLibrary.writeData(AppGlobalVariable.currentTest, AppGlobalVariable.getCurrentStep(), "Status", "Pass");
+			
+			test.log(Status.PASS, "Element contains the expected condition",
+	        		  MediaEntityBuilder.createScreenCaptureFromBase64String(AppGlobalVariable.currentScreenshot, "").build());
+			
+		} catch (Throwable e) {
+			ExcelLibrary.writeData(AppGlobalVariable.currentTest, AppGlobalVariable.getCurrentStep(), "Status", "Fail");
+			ExcelLibrary.writeData(AppGlobalVariable.currentTest, AppGlobalVariable.getCurrentStep(), "Failure Reason", e.getMessage());
+			
+			test.log(Status.FAIL, "Element does not contains expected condition",
+	        		  MediaEntityBuilder.createScreenCaptureFromBase64String(AppGlobalVariable.currentScreenshot, "").build());
+			
 		}
 	}
 }

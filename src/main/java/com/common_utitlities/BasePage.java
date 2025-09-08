@@ -30,6 +30,7 @@ import org.testng.annotations.BeforeTest;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -84,10 +85,10 @@ public class BasePage {
 	                .walk(frames -> frames.findFirst().map(StackWalker.StackFrame::getMethodName).orElse("Unknown"));
 			
 			// Update the step status
-			ExcelLibrary.writeData(AppGlobalVariable.currentTest, AppGlobalVariable.getCurrentStep(), "Status", "Pass");
+			ExcelLibrary.writeData(AppGlobalVariable.currentTest, AppGlobalVariable.currentStep, "Status", "Pass");
 			
 		} catch (Throwable e) {
-			ExcelLibrary.writeData(AppGlobalVariable.currentTest, AppGlobalVariable.getCurrentStep(), "Status", "Fail");
+			ExcelLibrary.writeData(AppGlobalVariable.currentTest, AppGlobalVariable.currentStep, "Status", "Fail");
 		}
 				
 		return driver;
@@ -142,10 +143,16 @@ public class BasePage {
         if (!Files.exists(screenshotsDir)) {
             Files.createDirectories(screenshotsDir);
         }
-        File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-        File destPath = new File(Constants.SCREENSHOTS_PATH + "/" + screenshotName + "_" + randomStr +".png");
         
+        // this is for HTML report
+        String srcFile1 = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BASE64);
+        AppGlobalVariable.currentScreenshot = srcFile1;
+        
+        // this is for excel report
+        File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+        File destPath = new File(Constants.SCREENSHOTS_PATH + "/" + screenshotName + "_" + randomStr +".png");   
         Files.copy(srcFile.toPath(), destPath.toPath());
+        
         AppGlobalVariable.currentScreenshotPath = Constants.SCREENSHOTS_PATH + "/" + screenshotName + "_" + randomStr + ".png";
         return destPath.toString();
     }

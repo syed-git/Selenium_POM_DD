@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 import com.common_utitlities.AppGlobalVariable;
 import com.common_utitlities.BasePage;
@@ -44,13 +45,14 @@ public class LoginPage extends BasePage {
 	                .walk(frames -> frames.findFirst().map(StackWalker.StackFrame::getMethodName).orElse("Unknown"));
 			
 			ExcelLibrary.writeData(AppGlobalVariable.currentTest, AppGlobalVariable.getCurrentStep(), "Status", "Pass");
-			test.log(Status.PASS, "enter the email address successfully: " + test.addScreenCaptureFromPath(captureScreenshot("enterEmail")));
-
+			
+			test.log(Status.PASS, "enter the email address successfully", MediaEntityBuilder.createScreenCaptureFromBase64String(AppGlobalVariable.currentScreenshot, "").build());
+			
 		} catch (Throwable e) {
 			ExcelLibrary.writeData(AppGlobalVariable.currentTest, AppGlobalVariable.getCurrentStep(), "Status", "Fail");
 			ExcelLibrary.writeData(AppGlobalVariable.currentTest, AppGlobalVariable.getCurrentStep(), "Failure Reason", e.getMessage());
-			test.log(Status.FAIL, "could not enter the email address: " + test.addScreenCaptureFromPath(captureScreenshot("enterEmail")));
-
+			test.log(Status.FAIL, "could not enter the email address", MediaEntityBuilder.createScreenCaptureFromBase64String(AppGlobalVariable.currentScreenshot, "").build());
+			
 		}
 	}
 	
@@ -65,13 +67,15 @@ public class LoginPage extends BasePage {
 	                .walk(frames -> frames.findFirst().map(StackWalker.StackFrame::getMethodName).orElse("Unknown"));
 			
 			ExcelLibrary.writeData(AppGlobalVariable.currentTest, AppGlobalVariable.getCurrentStep(), "Status", "Pass");
-			test.log(Status.PASS, "password entered successfully: " + test.addScreenCaptureFromPath(captureScreenshot("enterPassword")));
-
+			
+			test.log(Status.PASS, "password entered successfully", MediaEntityBuilder.createScreenCaptureFromBase64String(AppGlobalVariable.currentScreenshot, "").build());
+			
 		} catch (Throwable e) {
 			ExcelLibrary.writeData(AppGlobalVariable.currentTest, AppGlobalVariable.getCurrentStep(), "Status", "Fail");
 			ExcelLibrary.writeData(AppGlobalVariable.currentTest, AppGlobalVariable.getCurrentStep(), "Failure Reason", e.getMessage());
-			test.log(Status.FAIL, "could not enter the password: " + test.addScreenCaptureFromPath(captureScreenshot("enterPassword")));
-
+			
+			test.log(Status.FAIL, "could not enter the password", MediaEntityBuilder.createScreenCaptureFromBase64String(AppGlobalVariable.currentScreenshot, "").build());
+			
 		}
 	}
 	
@@ -86,13 +90,15 @@ public class LoginPage extends BasePage {
 	                .walk(frames -> frames.findFirst().map(StackWalker.StackFrame::getMethodName).orElse("Unknown"));
 						
 			ExcelLibrary.writeData(AppGlobalVariable.currentTest, AppGlobalVariable.getCurrentStep(), "Status", "Pass");
-			test.log(Status.PASS, "clicked on login successfully: " + test.addScreenCaptureFromPath(captureScreenshot("clickLogin")));
-
+			
+			test.log(Status.PASS, "clicked on login successfully", MediaEntityBuilder.createScreenCaptureFromBase64String(AppGlobalVariable.currentScreenshot, "").build());
+			
 		} catch (Throwable e) {
 			ExcelLibrary.writeData(AppGlobalVariable.currentTest, AppGlobalVariable.getCurrentStep(), "Status", "Fail");
 			ExcelLibrary.writeData(AppGlobalVariable.currentTest, AppGlobalVariable.getCurrentStep(), "Failure Reason", e.getMessage());
-			test.log(Status.FAIL, "unable to click login button: " + test.addScreenCaptureFromPath(captureScreenshot("clickLogin")));
-
+			
+			test.log(Status.FAIL, "unable to click login button", MediaEntityBuilder.createScreenCaptureFromBase64String(AppGlobalVariable.currentScreenshot, "").build());
+			
 		}
 	}
 

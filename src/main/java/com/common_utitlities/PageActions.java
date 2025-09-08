@@ -2,20 +2,27 @@ package com.common_utitlities;
 
 import java.util.Base64;
 import java.util.NoSuchElementException;
+import java.util.Set;
 import java.util.UUID;
 import java.io.File;
 import java.io.IOException;
 
 import javax.imageio.ImageIO;
 
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import ru.yandex.qatools.ashot.AShot;
 import ru.yandex.qatools.ashot.Screenshot;
 import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
 import java.nio.file.Files;
+import java.time.Duration;
 
 public class PageActions extends BasePage {
 	
@@ -67,9 +74,39 @@ public class PageActions extends BasePage {
         // Decode Base64
         byte[] decodedBytes = Base64.getDecoder().decode(encodedPpassword);
         String decryptPassword = new String(decodedBytes);
-
-        System.out.println(decryptPassword);
+        
 		return decryptPassword;
 		
 	}
+	
+	public static void switchToChildWindow() {
+	
+		Set <String> allWindows = BasePage.driver.getWindowHandles();
+		
+		
+	}
+	
+	public static void waitForElement(WebElement element, String condition, int timeout) {
+		
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
+
+		switch (condition) {
+		
+		case "visible": {
+			wait.until(ExpectedConditions.visibilityOf(element));
+			break;
+		}
+		case "invisible": {
+			wait.until(ExpectedConditions.invisibilityOf(element));
+			break;
+		}
+		case "clickable": {
+			wait.until(ExpectedConditions.elementToBeClickable(element));
+			break;
+		}
+		
+		}
+		
+	}
+	
 }
