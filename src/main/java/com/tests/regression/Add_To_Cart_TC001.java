@@ -44,7 +44,6 @@ public class Add_To_Cart_TC001 extends BasePage {
 		lp.clickOnLogin();
 		PageValidations.seeTitleContains("My Account", true);
 		
-		
 		hp.hoverOnDesktopDropDown();
 		hp.clickOnMac1();
 		hp.clickOnAddToCart();
